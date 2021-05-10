@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa3c44af-3ce5-4319-b71f-e16e05aa5b45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/game.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Users\Pythagoras\sdk\go1.15.5" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1sJ9aJjaB4AFISUlToZbFVOX1Et" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\assets" />
+      <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard" />
+      <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\modules" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rogue_wizard" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620596804246">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="828" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620596804246" />
+    <state x="1186" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620598467723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1186" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1620598467723" />
+    <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1620579950602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620579950602" />
+    <state width="1877" height="655" key="GridCell.Tab.0.bottom" timestamp="1620676123471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="655" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
+    <state width="1877" height="655" key="GridCell.Tab.0.center" timestamp="1620676123471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="655" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
+    <state width="1877" height="655" key="GridCell.Tab.0.left" timestamp="1620676123471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="655" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
+    <state width="1877" height="655" key="GridCell.Tab.0.right" timestamp="1620676123471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="655" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
+    <state width="1173" height="367" key="GridCell.Tab.1.bottom" timestamp="1620629474647">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1173" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
+    <state width="1173" height="367" key="GridCell.Tab.1.center" timestamp="1620629474647">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1173" height="367" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
+    <state width="1173" height="367" key="GridCell.Tab.1.left" timestamp="1620629474647">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1173" height="367" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
+    <state width="1173" height="367" key="GridCell.Tab.1.right" timestamp="1620629474647">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1173" height="367" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1620676345869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620676345869" />
+    <state x="1052" y="100" width="775" height="847" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1620604804358">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1052" y="100" width="775" height="847" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620604804358" />
+    <state x="1282" y="284" key="refactoring.ChangeSignatureDialog" timestamp="1620601485953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1282" y="284" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620601485953" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620676286788">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620676286788" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="*(*&quot;github.com/hajimehoshi/ebiten/v2.Image&quot;)(824638726400)" />
+        <watch expression="*(*&quot;[][]*github.com/Estuardo2015/rogue_wizard/modules.Tile&quot;)(824634049824)" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
