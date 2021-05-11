@@ -19,19 +19,20 @@ func (g *Game) Update() error {
 // Draw draws the game screen.
 // Draw is called every frame (typically 1/60[s] for 60Hz display).
 func (g *Game) Draw(screen *ebiten.Image) {
-	DrawLevel(g, screen)
+	RenderGame(g, screen)
 }
 
 // Layout takes the outside size (e.g., the window size) and returns the (logical) screen size.
 // If you don't have to adjust the screen size with the outside size, just return a fixed size.
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
-	return 1280, 800
+	return 640, 400
 }
 
 //NewGame creates a new Game Object and initializes the data
 //This is a pretty solid refactor candidate for later
 func NewGame() *Game {
 	g := &Game{}
-	g.Level = NewLevel()
+	g.Level = NewLevel(40, 25, 16, 16, 20, 20)
+	BuildDemoLevel(g.Level)
 	return g
 }

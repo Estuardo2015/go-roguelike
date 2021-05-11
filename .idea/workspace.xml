@@ -3,9 +3,37 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:camera" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fa3c44af-3ce5-4319-b71f-e16e05aa5b45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/game.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/rogue_wizard.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/story.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/air.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/air.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/wall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/game.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/game.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/input.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/input.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/level.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/level.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/map_parse.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/movement.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/movement.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/rendering.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rendering.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rogue_wizard.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +49,20 @@
   </component>
   <component name="GOROOT" path="C:\Users\Pythagoras\sdk\go1.15.5" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1sJ9aJjaB4AFISUlToZbFVOX1Et" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\documentation" />
       <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\assets" />
       <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard" />
       <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\modules" />
@@ -78,7 +114,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="camera" />
                       </list>
                     </value>
                   </entry>
@@ -89,6 +125,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial packages" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -102,26 +142,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1186" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1620598467723" />
+    <state x="578" y="88" key="CommitChangelistDialog2" timestamp="1620676391142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="578" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1620676391142" />
     <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1620579950602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620579950602" />
-    <state width="1877" height="655" key="GridCell.Tab.0.bottom" timestamp="1620676123471">
+    <state width="1877" height="150" key="GridCell.Tab.0.bottom" timestamp="1620708253457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="655" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
-    <state width="1877" height="655" key="GridCell.Tab.0.center" timestamp="1620676123471">
+    <state width="1877" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
+    <state width="1877" height="150" key="GridCell.Tab.0.center" timestamp="1620708253457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="655" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
-    <state width="1877" height="655" key="GridCell.Tab.0.left" timestamp="1620676123471">
+    <state width="1877" height="150" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
+    <state width="1877" height="150" key="GridCell.Tab.0.left" timestamp="1620708253457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="655" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
-    <state width="1877" height="655" key="GridCell.Tab.0.right" timestamp="1620676123471">
+    <state width="1877" height="150" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
+    <state width="1877" height="150" key="GridCell.Tab.0.right" timestamp="1620708253457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="655" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620676123471" />
+    <state width="1877" height="150" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
     <state width="1173" height="367" key="GridCell.Tab.1.bottom" timestamp="1620629474647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -146,14 +190,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1052" y="100" width="775" height="847" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620604804358" />
+    <state x="666" y="253" width="587" height="534" key="find.popup" timestamp="1620706625099">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="253" width="587" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620706625099" />
     <state x="1282" y="284" key="refactoring.ChangeSignatureDialog" timestamp="1620601485953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1282" y="284" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620601485953" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620676286788">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620676489453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620676286788" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620676489453" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

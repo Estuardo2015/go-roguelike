@@ -5,7 +5,6 @@ import (
 )
 
 func HandleInput(g *Game) {
-	// Write your game's logical update.
 	if ebiten.IsKeyPressed(ebiten.KeyArrowUp) {
 		Move(g, g.Level.Player, g.Level.Player.X, g.Level.Player.Y-1)
 	} else if ebiten.IsKeyPressed(ebiten.KeyArrowDown) {

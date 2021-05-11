@@ -6,13 +6,20 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
+const (
+	WindowWidth  = 840
+	WindowHeight = 400
+	MaxTPS       = 10
+)
+
 func main() {
 	game := modules.NewGame()
 
+	ebiten.SetWindowSize(WindowWidth, WindowHeight)
 	ebiten.SetWindowResizable(false)
 	ebiten.SetWindowTitle("Rogue Wizard")
-	ebiten.SetMaxTPS(10)
-	// Call ebiten.RunGame to start your game loop.
+	ebiten.SetMaxTPS(MaxTPS)
+	// Start game loop
 	if err := ebiten.RunGame(game); err != nil {
 		log.Fatal().Msg(err.Error())
 	}
