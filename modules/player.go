@@ -9,7 +9,7 @@ type Player struct {
 	X    int
 	Y    int
 
-	Image *ebiten.Image
+	image *ebiten.Image
 }
 
 func NewPlayer(n string, x, y int, i *ebiten.Image) *Player {
@@ -17,7 +17,7 @@ func NewPlayer(n string, x, y int, i *ebiten.Image) *Player {
 		Name:  n,
 		X:     x,
 		Y:     y,
-		Image: i,
+		image: i,
 	}
 }
 
@@ -30,4 +30,8 @@ func (pl *Player) Move(x int, y int, tg [][]*Tile) {
 		pl.X = x
 		pl.Y = y
 	}
+}
+
+func (pl *Player) Image() *ebiten.Image {
+	return pl.image
 }

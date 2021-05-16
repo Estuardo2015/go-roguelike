@@ -50,7 +50,14 @@ func (c Camera) LookAt(g *Game, screen *ebiten.Image) {
 		}
 	}
 
+	for _, e := range g.Level.Entities {
+		eX, eY := e.GetPosition()
+		op := &ebiten.DrawImageOptions{}
+		op.GeoM.Translate(float64((eX-camX)*g.Level.TileWidth), float64((eY-camY)*g.Level.TileWidth))
+		screen.DrawImage(e.Image(), op)
+	}
+
 	op := &ebiten.DrawImageOptions{}
 	op.GeoM.Translate(float64((g.Level.Player.X-camX)*g.Level.TileWidth), float64((g.Level.Player.Y-camY)*g.Level.TileWidth))
-	screen.DrawImage(g.Level.Player.Image, op)
+	screen.DrawImage(g.Level.Player.Image(), op)
 }

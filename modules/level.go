@@ -13,7 +13,7 @@ type Level struct {
 	TileGrid [][]*Tile
 
 	Player   *Player
-	Entities []*Entity
+	Entities []Entity
 
 	Camera *Camera
 }
