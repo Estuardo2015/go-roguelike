@@ -6,23 +6,23 @@ import (
 	"log"
 )
 
-var WallImg, AirImg, PlayerImg *ebiten.Image
+var WallImg, PlayerImg, GrassImg *ebiten.Image
 
 // Load sprites
 func init() {
 	var err error
 
-	PlayerImg, _, err = ebitenutil.NewImageFromFile("./assets/player.png")
+	PlayerImg, _, err = ebitenutil.NewImageFromFile("./assets/img/player.png")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	WallImg, _, err = ebitenutil.NewImageFromFile("./assets/wall.png")
+	WallImg, _, err = ebitenutil.NewImageFromFile("./assets/img/wall.png")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	AirImg, _, err = ebitenutil.NewImageFromFile("./assets/air.png")
+	GrassImg, _, err = ebitenutil.NewImageFromFile("./assets/img/grass.png")
 	if err != nil {
 		log.Fatal(err)
 	}
