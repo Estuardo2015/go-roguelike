@@ -37,6 +37,7 @@ func (c Camera) CalculateOrigin() (X, Y int) {
 func (c Camera) LookAt(g *Game, screen *ebiten.Image) {
 	camX, camY := c.CalculateOrigin()
 
+	// Draw world
 	for x := 0; x < c.ScreenWidth; x++ {
 		for y := 0; y < c.ScreenHeight; y++ {
 			tile := GetTile(g.Level, x+camX, y+camY)
@@ -44,20 +45,16 @@ func (c Camera) LookAt(g *Game, screen *ebiten.Image) {
 				continue
 			}
 
-			op := &ebiten.DrawImageOptions{}
-			op.GeoM.Translate(float64(x*g.Level.TileWidth), float64(y*g.Level.TileWidth))
-			screen.DrawImage(tile.Image, op)
+			ScreenDraw(x, y, tile.Image, screen, g)
 		}
 	}
 
+	// Draw Entities
 	for _, e := range g.Level.Entities {
 		eX, eY := e.GetPosition()
-		op := &ebiten.DrawImageOptions{}
-		op.GeoM.Translate(float64((eX-camX)*g.Level.TileWidth), float64((eY-camY)*g.Level.TileWidth))
-		screen.DrawImage(e.Image(), op)
+		ScreenDraw(eX-camX, eY-camY, e.Image(), screen, g)
 	}
 
-	op := &ebiten.DrawImageOptions{}
-	op.GeoM.Translate(float64((g.Level.Player.X-camX)*g.Level.TileWidth), float64((g.Level.Player.Y-camY)*g.Level.TileWidth))
-	screen.DrawImage(g.Level.Player.Image(), op)
+	// Draw Player
+	ScreenDraw(g.Level.Player.X-camX, g.Level.Player.Y-camY, g.Level.Player.Image(), screen, g)
 }
