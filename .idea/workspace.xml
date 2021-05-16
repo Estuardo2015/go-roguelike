@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fa3c44af-3ce5-4319-b71f-e16e05aa5b45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/camera.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/camera.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/rendering.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rendering.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/rogue_wizard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/rogue_wizard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/input.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/input.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,8 @@
     <MESSAGE value="initial packages" />
     <MESSAGE value="camera follow" />
     <MESSAGE value="entity method to return image" />
-    <option name="LAST_COMMIT_MESSAGE" value="entity method to return image" />
+    <MESSAGE value="abstracting drawing to method" />
+    <option name="LAST_COMMIT_MESSAGE" value="abstracting drawing to method" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -143,22 +144,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620579950602" />
-    <state width="1412" height="307" key="GridCell.Tab.0.bottom" timestamp="1621133796618">
+    <state width="1387" height="303" key="GridCell.Tab.0.bottom" timestamp="1621134928593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1412" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621133796618" />
-    <state width="1412" height="307" key="GridCell.Tab.0.center" timestamp="1621133796618">
+    <state width="1387" height="303" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621134928593" />
+    <state width="1387" height="303" key="GridCell.Tab.0.center" timestamp="1621134928593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1412" height="307" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621133796618" />
-    <state width="1412" height="307" key="GridCell.Tab.0.left" timestamp="1621133796618">
+    <state width="1387" height="303" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621134928593" />
+    <state width="1387" height="303" key="GridCell.Tab.0.left" timestamp="1621134928593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1412" height="307" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621133796618" />
-    <state width="1412" height="307" key="GridCell.Tab.0.right" timestamp="1621133796618">
+    <state width="1387" height="303" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621134928593" />
+    <state width="1387" height="303" key="GridCell.Tab.0.right" timestamp="1621134928593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1412" height="307" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621133796618" />
+    <state width="1387" height="303" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621134928593" />
     <state width="1412" height="342" key="GridCell.Tab.1.bottom" timestamp="1621130983534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

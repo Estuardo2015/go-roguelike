@@ -7,5 +7,5 @@ Features:
     Attend class and participate in extra curricular activities
 
 TODO:
- - Following Camera
+ - Following Camera (Done)
  - Map Generation from text file
