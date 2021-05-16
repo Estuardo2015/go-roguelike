@@ -1,6 +1,7 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/commons"
 	"github.com/hajimehoshi/ebiten/v2"
 )
 
@@ -25,14 +26,18 @@ func (g *Game) Draw(screen *ebiten.Image) {
 // Layout takes the outside size (e.g., the window size) and returns the (logical) screen size.
 // If you don't have to adjust the screen size with the outside size, just return a fixed size.
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
-	return 640, 400
+	return commons.ScreenWidthPixels, commons.ScreenHeightPixels
 }
 
 //NewGame creates a new Game Object and initializes the data
 //This is a pretty solid refactor candidate for later
 func NewGame() *Game {
 	g := &Game{}
-	g.Level = NewLevel(40, 25, 16, 16, 20, 20)
+	p := NewPlayer("Hiro", 20, 20, PlayerImg)
+
+	g.Level = NewLevel(80, 50, commons.TileWidth, p)
+
 	BuildDemoLevel(g.Level)
+
 	return g
 }

@@ -14,26 +14,24 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:camera" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa3c44af-3ce5-4319-b71f-e16e05aa5b45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/documentation/rogue_wizard.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/story.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/constants.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/camera.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/player.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/air.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/air.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/player.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/wall.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/entity.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/entity.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/game.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/game.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/input.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/input.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/level.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/level.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/map_parse.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/movement.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/movement.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/movement.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/rendering.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rendering.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rogue_wizard.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/tile.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/tile.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +76,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\commons" />
       <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\documentation" />
       <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard\assets" />
       <recent name="C:\Users\Pythagoras\GolandProjects\rogue_wizard" />
@@ -114,7 +113,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="camera" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -125,6 +124,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial packages" />
@@ -150,58 +150,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620579950602" />
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom" timestamp="1620708253457">
+    <state width="1412" height="307" key="GridCell.Tab.0.bottom" timestamp="1621131577683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
-    <state width="1877" height="150" key="GridCell.Tab.0.center" timestamp="1620708253457">
+    <state width="1412" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621131577683" />
+    <state width="1412" height="307" key="GridCell.Tab.0.center" timestamp="1621131577683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
-    <state width="1877" height="150" key="GridCell.Tab.0.left" timestamp="1620708253457">
+    <state width="1412" height="307" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621131577683" />
+    <state width="1412" height="307" key="GridCell.Tab.0.left" timestamp="1621131577683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
-    <state width="1877" height="150" key="GridCell.Tab.0.right" timestamp="1620708253457">
+    <state width="1412" height="307" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621131577683" />
+    <state width="1412" height="307" key="GridCell.Tab.0.right" timestamp="1621131577683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="150" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620708253457" />
-    <state width="1173" height="367" key="GridCell.Tab.1.bottom" timestamp="1620629474647">
+    <state width="1412" height="307" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621131577683" />
+    <state width="1412" height="342" key="GridCell.Tab.1.bottom" timestamp="1621130983534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
-    <state width="1173" height="367" key="GridCell.Tab.1.center" timestamp="1620629474647">
+    <state width="1412" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621130983534" />
+    <state width="1412" height="342" key="GridCell.Tab.1.center" timestamp="1621130983534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="367" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
-    <state width="1173" height="367" key="GridCell.Tab.1.left" timestamp="1620629474647">
+    <state width="1412" height="342" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621130983534" />
+    <state width="1412" height="342" key="GridCell.Tab.1.left" timestamp="1621130983534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="367" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
-    <state width="1173" height="367" key="GridCell.Tab.1.right" timestamp="1620629474647">
+    <state width="1412" height="342" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621130983534" />
+    <state width="1412" height="342" key="GridCell.Tab.1.right" timestamp="1621130983534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="367" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620629474647" />
+    <state width="1412" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621130983534" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1620676345869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620676345869" />
-    <state x="1052" y="100" width="775" height="847" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1620604804358">
+    <state x="196" y="59" width="1631" height="888" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1620885266107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1052" y="100" width="775" height="847" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620604804358" />
+    <state x="196" y="59" width="1631" height="888" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620885266107" />
     <state x="666" y="253" width="587" height="534" key="find.popup" timestamp="1620706625099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="253" width="587" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620706625099" />
-    <state x="1282" y="284" key="refactoring.ChangeSignatureDialog" timestamp="1620601485953">
+    <state x="1282" y="284" key="refactoring.ChangeSignatureDialog" timestamp="1621111533755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1282" y="284" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620601485953" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620676489453">
+    <state x="1282" y="284" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621111533755" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620887180065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620676489453" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620887180065" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

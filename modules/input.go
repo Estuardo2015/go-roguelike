@@ -6,12 +6,12 @@ import (
 
 func HandleInput(g *Game) {
 	if ebiten.IsKeyPressed(ebiten.KeyArrowUp) {
-		Move(g, g.Level.Player, g.Level.Player.X, g.Level.Player.Y-1)
+		g.Level.Player.Move(g.Level.Player.X, g.Level.Player.Y-1, g.Level.TileGrid)
 	} else if ebiten.IsKeyPressed(ebiten.KeyArrowDown) {
-		Move(g, g.Level.Player, g.Level.Player.X, g.Level.Player.Y+1)
+		g.Level.Player.Move(g.Level.Player.X, g.Level.Player.Y+1, g.Level.TileGrid)
 	} else if ebiten.IsKeyPressed(ebiten.KeyArrowLeft) {
-		Move(g, g.Level.Player, g.Level.Player.X-1, g.Level.Player.Y)
+		g.Level.Player.Move(g.Level.Player.X-1, g.Level.Player.Y, g.Level.TileGrid)
 	} else if ebiten.IsKeyPressed(ebiten.KeyArrowRight) {
-		Move(g, g.Level.Player, g.Level.Player.X+1, g.Level.Player.Y)
+		g.Level.Player.Move(g.Level.Player.X+1, g.Level.Player.Y, g.Level.TileGrid)
 	}
 }

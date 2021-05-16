@@ -1,42 +1,41 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/commons"
 	_ "image/png"
 )
 
 type Level struct {
-	Width      int
-	Height     int
-	TileWidth  int
-	TileHeight int
+	Width     int
+	Height    int
+	TileWidth int
 
 	TileGrid [][]*Tile
 
-	Player   *Entity
+	Player   *Player
 	Entities []*Entity
+
+	Camera *Camera
 }
 
-func NewLevel(w, h, tw, th, pX, pY int) *Level {
+func NewLevel(w, h, tw int, p *Player) *Level {
 	l := &Level{
-		Width:      w, // tiles wide
-		Height:     h, // tiles high
-		TileWidth:  tw,
-		TileHeight: th,
+		Width:     w, // tiles wide
+		Height:    h, // tiles high
+		TileWidth: tw,
 
 		TileGrid: make([][]*Tile, w),
 
-		Player: &Entity{
-			Name:  "Player",
-			Image: PlayerImg,
-			X:     pX,
-			Y:     pY,
-		},
+		Player: p,
 	}
 
 	// Initialize inner slices
 	for i := range l.TileGrid {
 		l.TileGrid[i] = make([]*Tile, l.Height)
 	}
+
+	// Initialize camera
+	l.Camera = NewCamera(l.Player, commons.ScreenWidthTiles, commons.ScreenHeightTiles, l.Width, l.Height)
 
 	return l
 }
