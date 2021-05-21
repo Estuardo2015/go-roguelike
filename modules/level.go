@@ -1,7 +1,7 @@
 package modules
 
 import (
-	"github.com/Estuardo2015/rogue_wizard/commons"
+	"github.com/Estuardo2015/rogue_wizard/modules/commons"
 	_ "image/png"
 )
 
@@ -18,20 +18,15 @@ type Level struct {
 	Camera *Camera
 }
 
-func NewLevel(w, h, tw int, p *Player) *Level {
+func NewLevel(w, h, tw int, tg [][]*Tile, p *Player) *Level {
 	l := &Level{
 		Width:     w, // tiles wide
 		Height:    h, // tiles high
 		TileWidth: tw,
 
-		TileGrid: make([][]*Tile, w),
+		TileGrid: tg,
 
 		Player: p,
-	}
-
-	// Initialize inner slices
-	for i := range l.TileGrid {
-		l.TileGrid[i] = make([]*Tile, l.Height)
 	}
 
 	// Initialize camera

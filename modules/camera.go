@@ -38,14 +38,14 @@ func (c Camera) LookAt(g *Game, screen *ebiten.Image) {
 	camX, camY := c.CalculateOrigin()
 
 	// Draw world
-	for x := 0; x < c.ScreenWidth; x++ {
-		for y := 0; y < c.ScreenHeight; y++ {
-			tile := GetTile(g.Level, x+camX, y+camY)
+	for tgX := 0; tgX < c.ScreenWidth; tgX++ {
+		for tgY := 0; tgY < c.ScreenHeight; tgY++ {
+			tile := GetTile(g.Level, tgX+camX, tgY+camY)
 			if tile == nil {
 				continue
 			}
 
-			ScreenDraw(x, y, tile.Image, screen, g)
+			ScreenDraw(tgX, tgY, tile.Image, screen, g)
 		}
 	}
 
