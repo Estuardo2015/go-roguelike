@@ -6,9 +6,9 @@ import (
 )
 
 type Level struct {
-	Width     int
-	Height    int
-	TileWidth int
+	Width     int // tiles wide
+	Height    int // tiles high
+	TileWidth int // tile pixel width
 
 	TileGrid [][]*Tile
 
@@ -20,8 +20,8 @@ type Level struct {
 
 func NewLevel(w, h, tw int, tg [][]*Tile, p *Player) *Level {
 	l := &Level{
-		Width:     w, // tiles wide
-		Height:    h, // tiles high
+		Width:     w,
+		Height:    h,
 		TileWidth: tw,
 
 		TileGrid: tg,
@@ -33,21 +33,4 @@ func NewLevel(w, h, tw int, tg [][]*Tile, p *Player) *Level {
 	l.Camera = NewCamera(l.Player, commons.ScreenWidthTiles, commons.ScreenHeightTiles, l.Width, l.Height)
 
 	return l
-}
-
-func BuildDemoLevel(l *Level) {
-	for x := 0; x < l.Width; x++ {
-		for y := 0; y < l.Height; y++ {
-			// If on edge of map
-			if x == 0 || x == l.Width-1 || y == 0 || y == l.Height-1 {
-				tile := &Tile{
-					X:       x,
-					Y:       y,
-					Image:   WallImg,
-					Blocked: true,
-				}
-				l.TileGrid[x][y] = tile
-			}
-		}
-	}
 }

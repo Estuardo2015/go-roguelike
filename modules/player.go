@@ -31,7 +31,7 @@ func (pl *Player) Move(x int, y int, tg [][]*Tile) {
 		pl.X = x
 		pl.Y = y
 	}
-	log.Debug().Msgf("PlayerX: %d - PlayerY: %d", pl.X, pl.Y)
+	log.Debug().Msgf("Move - PlayerX: %d - PlayerY: %d", pl.X, pl.Y)
 }
 
 func (pl *Player) Image() *ebiten.Image {

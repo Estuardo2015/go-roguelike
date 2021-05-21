@@ -35,17 +35,11 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeigh
 func NewGame() *Game {
 	g := &Game{}
 
-	// Uncomment for demo level
-	//p := NewPlayer("Hiro", 20, 20, PlayerImg)
-	//g.Level = NewLevel(80, 50, commons.TileWidth, p)
-	//BuildDemoLevel(g.Level)
-
 	path := "./assets/levels/unnamed.txt"
 	lvl, err := CreateLevelFromTxtFile(path)
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	g.Level = lvl
 
 	return g
