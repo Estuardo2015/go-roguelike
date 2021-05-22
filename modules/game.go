@@ -42,5 +42,13 @@ func NewGame() *Game {
 	}
 	g.Level = lvl
 
+	g.Level.AddEntity(&Mob{
+		Name:    "zombie",
+		X:       2,
+		Y:       1,
+		Blocked: true,
+		image:   ZombieImg,
+	})
+
 	return g
 }
