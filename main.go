@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/Estuardo2015/rogue_wizard/commons"
 	"github.com/Estuardo2015/rogue_wizard/modules"
+	"github.com/Estuardo2015/rogue_wizard/modules/commons"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/rs/zerolog/log"
 )

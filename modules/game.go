@@ -1,8 +1,9 @@
 package modules
 
 import (
-	"github.com/Estuardo2015/rogue_wizard/commons"
+	"github.com/Estuardo2015/rogue_wizard/modules/commons"
 	"github.com/hajimehoshi/ebiten/v2"
+	"log"
 )
 
 // Game implements ebiten.Game interface.
@@ -33,11 +34,13 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeigh
 //This is a pretty solid refactor candidate for later
 func NewGame() *Game {
 	g := &Game{}
-	p := NewPlayer("Hiro", 20, 20, PlayerImg)
 
-	g.Level = NewLevel(80, 50, commons.TileWidth, p)
-
-	BuildDemoLevel(g.Level)
+	path := "./assets/levels/unnamed.txt"
+	lvl, err := CreateLevelFromTxtFile(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+	g.Level = lvl
 
 	return g
 }
