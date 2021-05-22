@@ -6,7 +6,7 @@ Mechanics To Implement:
  - <s>Player</s> 
  - <s>Movement</s>
  - <s>Camera</s>
- - Map Generation
+ - <s>Map Generation</s>
  - Enemies
  - Combat
  - Inventory
