@@ -18,6 +18,17 @@ type Level struct {
 	Camera *Camera
 }
 
+func (l *Level) GetTile(x, y int) *Tile {
+	if x < 0 || x >= l.Width || y < 0 || y >= l.Height {
+		return nil
+	}
+	return l.TileGrid[x][y]
+}
+
+func (l *Level) AddEntity(e Entity) {
+	l.Entities = append(l.Entities, e)
+}
+
 func NewLevel(w, h, tw int, tg [][]*Tile, p *Player) *Level {
 	l := &Level{
 		Width:     w,

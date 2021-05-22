@@ -9,13 +9,6 @@ type Tile struct {
 	Blocked bool
 }
 
-func GetTile(l *Level, x, y int) *Tile {
-	if x < 0 || x >= l.Width || y < 0 || y >= l.Height {
-		return nil
-	}
-	return l.TileGrid[x][y]
-}
-
 func NewTile(x, y int, i *ebiten.Image, b bool) *Tile {
 	return &Tile{
 		X:       x,
@@ -23,13 +16,4 @@ func NewTile(x, y int, i *ebiten.Image, b bool) *Tile {
 		Image:   i,
 		Blocked: b,
 	}
-}
-
-func NewTileGrid() [][]*Tile {
-	level := make([][]*Tile, 0)
-	for i, _ := range level {
-		level[i] = make([]*Tile, 0)
-	}
-
-	return level
 }
