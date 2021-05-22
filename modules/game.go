@@ -15,6 +15,7 @@ type Game struct {
 // Update is called every tick (1/60 [s] by default).
 func (g *Game) Update() error {
 	HandleInput(g)
+	MoveEntities(g)
 	return nil
 }
 
