@@ -109,9 +109,9 @@ func generatePlayer(scanner *bufio.Scanner) (*Player, error) {
 func tileFromChar(char string) *Tile {
 	switch char {
 	case "#":
-		return NewTile(0, 0, WallImg, true)
+		return NewTile(WallImg, true)
 	case "v":
-		return NewTile(0, 0, GrassImg, false)
+		return NewTile(GrassImg, false)
 	default:
 		return nil
 	}

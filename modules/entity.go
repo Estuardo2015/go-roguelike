@@ -1,6 +1,7 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/modules/components"
 	"github.com/Estuardo2015/rogue_wizard/modules/utils"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/rs/zerolog/log"
@@ -13,12 +14,23 @@ type Entity interface {
 }
 
 type Mob struct {
-	Name    string
-	X       int
-	Y       int
+	Name string
+	components.PositionComponent
 	Blocked bool
 
 	image *ebiten.Image
+}
+
+func NewMob(n string, x, y int, i *ebiten.Image, blocked bool) *Mob {
+	m := &Mob{
+		Name:    n,
+		Blocked: blocked,
+		image:   i,
+	}
+	m.X = x
+	m.Y = y
+
+	return m
 }
 
 func (m *Mob) GetPosition() (x, y int) {

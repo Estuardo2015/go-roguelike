@@ -1,25 +1,28 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/modules/components"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/rs/zerolog/log"
 )
 
 type Player struct {
 	Name string
-	X    int
-	Y    int
+	components.PositionComponent
+	components.HealthComponent
 
 	image *ebiten.Image
 }
 
 func NewPlayer(n string, x, y int, i *ebiten.Image) *Player {
-	return &Player{
+	p := &Player{
 		Name:  n,
-		X:     x,
-		Y:     y,
 		image: i,
 	}
+	p.X = x
+	p.Y = y
+
+	return p
 }
 
 func (pl *Player) GetPosition() (x, y int) {
