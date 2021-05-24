@@ -16,6 +16,7 @@ type Game struct {
 func (g *Game) Update() error {
 	HandleInput(g)
 	MoveEntities(g)
+	LogCursor()
 	return nil
 }
 

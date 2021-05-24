@@ -4,7 +4,6 @@ import (
 	"github.com/Estuardo2015/rogue_wizard/modules/components"
 	"github.com/Estuardo2015/rogue_wizard/modules/utils"
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/rs/zerolog/log"
 )
 
 type Entity interface {
@@ -43,7 +42,7 @@ func (m *Mob) Move(x int, y int, tg [][]*Tile) {
 		m.X = x
 		m.Y = y
 	}
-	log.Debug().Msgf("Move - MobX: %d - MobY: %d", m.X, m.Y)
+	//log.Debug().Msgf("Move - MobX: %d - MobY: %d", m.X, m.Y)
 }
 
 func (m *Mob) Image() *ebiten.Image {

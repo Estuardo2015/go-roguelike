@@ -3,7 +3,6 @@ package modules
 import (
 	"github.com/Estuardo2015/rogue_wizard/modules/components"
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/rs/zerolog/log"
 )
 
 type Player struct {
@@ -34,7 +33,7 @@ func (pl *Player) Move(x int, y int, tg [][]*Tile) {
 		pl.X = x
 		pl.Y = y
 	}
-	log.Debug().Msgf("Move - PlayerX: %d - PlayerY: %d", pl.X, pl.Y)
+	//log.Debug().Msgf("Move - PlayerX: %d - PlayerY: %d", pl.X, pl.Y)
 }
 
 func (pl *Player) Image() *ebiten.Image {
