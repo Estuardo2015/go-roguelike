@@ -17,5 +17,5 @@ const (
 	TileWidth = 16
 
 	// Performance Settings
-	MaxTPS = 8
+	MaxTPS = 7
 )

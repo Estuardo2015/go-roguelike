@@ -16,6 +16,7 @@ type Entity interface {
 type Mob struct {
 	Name string
 	components.PositionComponent
+	components.HealthComponent
 	Blocked bool
 
 	image *ebiten.Image
