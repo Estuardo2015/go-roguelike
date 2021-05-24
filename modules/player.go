@@ -1,14 +1,13 @@
 package modules
 
 import (
-	"github.com/Estuardo2015/rogue_wizard/modules/components"
 	"github.com/hajimehoshi/ebiten/v2"
 )
 
 type Player struct {
 	Name string
-	components.PositionComponent
-	components.HealthComponent
+	PositionComponent
+	HealthComponent
 
 	image *ebiten.Image
 }
@@ -28,8 +27,8 @@ func (pl *Player) GetPosition() (x, y int) {
 	return pl.X, pl.Y
 }
 
-func (pl *Player) Move(x int, y int, tg [][]*Tile) {
-	if tg[x][y] == nil || !tg[x][y].Blocked {
+func (pl *Player) Move(x int, y int, g *Grid) {
+	if g.TileAt(x, y) == nil || !g.TileAt(x, y).Blocked {
 		pl.X = x
 		pl.Y = y
 	}

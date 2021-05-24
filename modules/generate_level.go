@@ -18,12 +18,12 @@ func CreateLevelFromTxtFile(path string) (l *Level, err error) {
 	}
 	defer f.Close()
 
-	tg, p, err := GenerateTileMapAndPlayer(f)
+	g, p, err := GenerateGridAndPlayer(f)
 	if logging.Error(err, "unable to generate tile map from file '%s'", path) {
 		return
 	}
 
-	l = NewLevel(len(tg), len(tg[0]), commons.TileWidth, tg, p)
+	l = NewLevel(commons.TileWidth, g, p)
 
 	return
 }
@@ -36,7 +36,7 @@ func OpenFile(path string) (f *os.File, err error) {
 	return
 }
 
-func GenerateTileMapAndPlayer(f *os.File) (tg [][]*Tile, p *Player, err error) {
+func GenerateGridAndPlayer(f *os.File) (g *Grid, p *Player, err error) {
 	scanner := bufio.NewScanner(f)
 
 	p, err = generatePlayer(scanner)
@@ -56,9 +56,15 @@ func GenerateTileMapAndPlayer(f *os.File) (tg [][]*Tile, p *Player, err error) {
 		charGrid = append(charGrid, row)
 	}
 
-	tg, err = TileGridFromChars(charGrid)
+	tg, err := TileGridFromChars(charGrid)
 	if err != nil {
 		return
+	}
+
+	g = &Grid{
+		width:    len(tg),
+		height:   len(tg[0]),
+		tileGrid: tg,
 	}
 
 	if err = scanner.Err(); err != nil {

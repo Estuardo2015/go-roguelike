@@ -1,6 +1,4 @@
-package components
-
-import "github.com/Estuardo2015/rogue_wizard/modules"
+package modules
 
 type MagicComponent struct {
 	Spells      map[string]Spell
@@ -8,6 +6,6 @@ type MagicComponent struct {
 }
 
 type Spell interface {
-	Cast(target modules.Entity)
+	Cast(target Entity)
 	Name() string
 }
