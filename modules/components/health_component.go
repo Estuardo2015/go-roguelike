@@ -10,8 +10,12 @@ func (hc HealthComponent) SetHealth(hp, maxHp int) {
 	hc.maxHealth = maxHp
 }
 
-func (hc HealthComponent) SubtractHealth(hp int) {
-	hc.health = hc.health - hp
+func (hc HealthComponent) Health() int {
+	return hc.health
+}
+
+func (hc HealthComponent) MaxHealth() int {
+	return hc.maxHealth
 }
 
 func (hc HealthComponent) AddHealth(hp int) {
@@ -19,4 +23,8 @@ func (hc HealthComponent) AddHealth(hp int) {
 	if hc.health > hc.maxHealth {
 		hc.health = hc.maxHealth
 	}
+}
+
+func (hc HealthComponent) SubtractHealth(hp int) {
+	hc.health = hc.health - hp
 }
