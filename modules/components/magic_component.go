@@ -3,8 +3,16 @@ package components
 import "github.com/Estuardo2015/rogue_wizard/modules/entity"
 
 type MagicComponent struct {
-	Spells      map[string]Spell
-	LoadedSpell Spell
+	spells      map[string]Spell
+	loadedSpell Spell
+}
+
+func (mc MagicComponent) AddSpell(s Spell) {
+	mc.spells[s.Name()] = s
+}
+
+func (mc MagicComponent) RemoveSpell(name string) {
+	delete(mc.spells, name)
 }
 
 type Spell interface {
