@@ -6,7 +6,10 @@ import (
 	"log"
 )
 
-var WallImg, PlayerImg, GrassImg *ebiten.Image
+var WallImg,
+	PlayerImg,
+	GrassImg,
+	ZombieImg *ebiten.Image
 
 // Load sprites
 func init() {
@@ -23,6 +26,11 @@ func init() {
 	}
 
 	GrassImg, _, err = ebitenutil.NewImageFromFile("./assets/img/grass.png")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	ZombieImg, _, err = ebitenutil.NewImageFromFile("./assets/img/zombie.png")
 	if err != nil {
 		log.Fatal(err)
 	}

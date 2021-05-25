@@ -1,12 +1,13 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/modules/entity"
 	"github.com/hajimehoshi/ebiten/v2"
 	"math"
 )
 
 type Camera struct {
-	Target Entity
+	Target entity.Entity
 
 	ScreenWidth  int
 	ScreenHeight int
@@ -15,7 +16,7 @@ type Camera struct {
 	TileWidth    int
 }
 
-func NewCamera(e Entity, sw, sh, lw, lh int) *Camera {
+func NewCamera(e entity.Entity, sw, sh, lw, lh int) *Camera {
 	return &Camera{
 		Target:       e,
 		ScreenWidth:  sw,
@@ -40,7 +41,7 @@ func (c Camera) LookAt(g *Game, screen *ebiten.Image) {
 	// Draw world
 	for tgX := 0; tgX < c.ScreenWidth; tgX++ {
 		for tgY := 0; tgY < c.ScreenHeight; tgY++ {
-			tile := GetTile(g.Level, tgX+camX, tgY+camY)
+			tile := g.Level.TileAt(tgX+camX, tgY+camY)
 			if tile == nil {
 				continue
 			}

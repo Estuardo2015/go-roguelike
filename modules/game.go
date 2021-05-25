@@ -2,6 +2,7 @@ package modules
 
 import (
 	"github.com/Estuardo2015/rogue_wizard/modules/commons"
+	"github.com/Estuardo2015/rogue_wizard/modules/entity"
 	"github.com/hajimehoshi/ebiten/v2"
 	"log"
 )
@@ -15,6 +16,8 @@ type Game struct {
 // Update is called every tick (1/60 [s] by default).
 func (g *Game) Update() error {
 	HandleInput(g)
+	entity.MoveEntities(g.Level.Entities, g.Level.Grid)
+	LogCursor()
 	return nil
 }
 
@@ -41,6 +44,9 @@ func NewGame() *Game {
 		log.Fatal(err)
 	}
 	g.Level = lvl
+
+	g.Level.AddEntity(NewMob("zombie", 2, 1, ZombieImg, true))
+	g.Level.AddEntity(NewMob("zombie", 7, 4, ZombieImg, true))
 
 	return g
 }

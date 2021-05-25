@@ -1,37 +1,41 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/modules/components"
+	"github.com/Estuardo2015/rogue_wizard/modules/grid"
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/rs/zerolog/log"
 )
 
 type Player struct {
 	Name string
-	X    int
-	Y    int
+	components.PositionComponent
+	components.HealthComponent
+	components.MagicComponent
 
 	image *ebiten.Image
 }
 
 func NewPlayer(n string, x, y int, i *ebiten.Image) *Player {
-	return &Player{
+	p := &Player{
 		Name:  n,
-		X:     x,
-		Y:     y,
 		image: i,
 	}
+	p.X = x
+	p.Y = y
+
+	return p
 }
 
 func (pl *Player) GetPosition() (x, y int) {
 	return pl.X, pl.Y
 }
 
-func (pl *Player) Move(x int, y int, tg [][]*Tile) {
-	if tg[x][y] == nil || !tg[x][y].Blocked {
+func (pl *Player) Move(x int, y int, g *grid.Grid) {
+	if g.TileAt(x, y) == nil || !g.TileAt(x, y).Blocked {
 		pl.X = x
 		pl.Y = y
 	}
-	log.Debug().Msgf("Move - PlayerX: %d - PlayerY: %d", pl.X, pl.Y)
+	//log.Debug().Msgf("Move - PlayerX: %d - PlayerY: %d", pl.X, pl.Y)
 }
 
 func (pl *Player) Image() *ebiten.Image {
