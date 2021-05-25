@@ -11,6 +11,7 @@ type Player struct {
 	components.PositionComponent
 	components.HealthComponent
 	components.MagicComponent
+	components.InventoryComponent
 
 	image *ebiten.Image
 }
