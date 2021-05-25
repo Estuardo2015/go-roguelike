@@ -1,4 +1,4 @@
-package modules
+package components
 
 type PositionComponent struct {
 	X int

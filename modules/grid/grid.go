@@ -1,4 +1,4 @@
-package modules
+package grid
 
 type Grid struct {
 	width    int // tiles wide
@@ -20,4 +20,14 @@ func (g Grid) Width() int {
 
 func (g Grid) Height() int {
 	return g.height
+}
+
+func NewGrid(w, h int, tg [][]*Tile) *Grid {
+	g := &Grid{
+		width:    len(tg),
+		height:   len(tg[0]),
+		tileGrid: tg,
+	}
+
+	return g
 }

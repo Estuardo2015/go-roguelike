@@ -2,23 +2,25 @@ package modules
 
 import (
 	"github.com/Estuardo2015/rogue_wizard/modules/commons"
+	"github.com/Estuardo2015/rogue_wizard/modules/entity"
+	"github.com/Estuardo2015/rogue_wizard/modules/grid"
 	_ "image/png"
 )
 
 type Level struct {
-	*Grid
+	*grid.Grid
 
 	Player   *Player
-	Entities []Entity
+	Entities []entity.Entity
 
 	Camera *Camera
 }
 
-func (l *Level) AddEntity(e Entity) {
+func (l *Level) AddEntity(e entity.Entity) {
 	l.Entities = append(l.Entities, e)
 }
 
-func NewLevel(tw int, g *Grid, p *Player) *Level {
+func NewLevel(tw int, g *grid.Grid, p *Player) *Level {
 	l := &Level{
 		Grid:   g,
 		Player: p,

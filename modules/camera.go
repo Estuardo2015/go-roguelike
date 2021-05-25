@@ -1,12 +1,13 @@
 package modules
 
 import (
+	"github.com/Estuardo2015/rogue_wizard/modules/entity"
 	"github.com/hajimehoshi/ebiten/v2"
 	"math"
 )
 
 type Camera struct {
-	Target Entity
+	Target entity.Entity
 
 	ScreenWidth  int
 	ScreenHeight int
@@ -15,7 +16,7 @@ type Camera struct {
 	TileWidth    int
 }
 
-func NewCamera(e Entity, sw, sh, lw, lh int) *Camera {
+func NewCamera(e entity.Entity, sw, sh, lw, lh int) *Camera {
 	return &Camera{
 		Target:       e,
 		ScreenWidth:  sw,

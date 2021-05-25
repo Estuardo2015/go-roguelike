@@ -1,4 +1,4 @@
-package modules
+package grid
 
 import "github.com/hajimehoshi/ebiten/v2"
 

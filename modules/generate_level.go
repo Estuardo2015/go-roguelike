@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/Estuardo2015/rogue_wizard/modules/commons"
+	"github.com/Estuardo2015/rogue_wizard/modules/grid"
 	"github.com/Estuardo2015/rogue_wizard/modules/logging"
 	"github.com/Estuardo2015/rogue_wizard/modules/utils"
 	"github.com/rs/zerolog/log"
@@ -36,7 +37,7 @@ func OpenFile(path string) (f *os.File, err error) {
 	return
 }
 
-func GenerateGridAndPlayer(f *os.File) (g *Grid, p *Player, err error) {
+func GenerateGridAndPlayer(f *os.File) (g *grid.Grid, p *Player, err error) {
 	scanner := bufio.NewScanner(f)
 
 	p, err = generatePlayer(scanner)
@@ -61,11 +62,7 @@ func GenerateGridAndPlayer(f *os.File) (g *Grid, p *Player, err error) {
 		return
 	}
 
-	g = &Grid{
-		width:    len(tg),
-		height:   len(tg[0]),
-		tileGrid: tg,
-	}
+	g = grid.NewGrid(len(tg), len(tg[0]), tg)
 
 	if err = scanner.Err(); err != nil {
 		return
@@ -75,14 +72,14 @@ func GenerateGridAndPlayer(f *os.File) (g *Grid, p *Player, err error) {
 }
 
 // Level must be generated this way otherwise it comes out flipped -_-
-func TileGridFromChars(charGrid [][]string) (tg [][]*Tile, err error) {
+func TileGridFromChars(charGrid [][]string) (tg [][]*grid.Tile, err error) {
 	tgLen := len(charGrid[0])
 	tgWidth := len(charGrid)
 
 	// Initialize tile grid
-	tg = make([][]*Tile, tgLen)
+	tg = make([][]*grid.Tile, tgLen)
 	for i, _ := range tg {
-		tg[i] = make([]*Tile, tgWidth)
+		tg[i] = make([]*grid.Tile, tgWidth)
 	}
 
 	// Loop through char grid
@@ -112,12 +109,12 @@ func generatePlayer(scanner *bufio.Scanner) (*Player, error) {
 	return p, nil
 }
 
-func tileFromChar(char string) *Tile {
+func tileFromChar(char string) *grid.Tile {
 	switch char {
 	case "#":
-		return NewTile(WallImg, true)
+		return grid.NewTile(WallImg, true)
 	case "v":
-		return NewTile(GrassImg, false)
+		return grid.NewTile(GrassImg, false)
 	default:
 		return nil
 	}
