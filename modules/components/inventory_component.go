@@ -15,4 +15,5 @@ func (ic InventoryComponent) RemoveItem(name string) {
 type Item interface {
 	Name() string
 	Use()
+	Weight() int
 }

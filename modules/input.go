@@ -5,6 +5,7 @@ import (
 )
 
 func HandleInput(g *Game) {
+	//GetCursorXY()
 	if ebiten.IsKeyPressed(ebiten.KeyW) {
 		g.Level.Player.Move(g.Level.Player.X, g.Level.Player.Y-1, g.Level.Grid)
 	} else if ebiten.IsKeyPressed(ebiten.KeyS) {

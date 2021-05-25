@@ -17,7 +17,6 @@ type Game struct {
 func (g *Game) Update() error {
 	HandleInput(g)
 	entity.MoveEntities(g.Level.Entities, g.Level.Grid)
-	LogCursor()
 	return nil
 }
 
