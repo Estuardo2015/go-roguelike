@@ -15,6 +15,12 @@ func (mc MagicComponent) RemoveSpell(name string) {
 	delete(mc.spells, name)
 }
 
+func (mc MagicComponent) CastSpell(e entity.Entity) {
+	if mc.loadedSpell != nil {
+		mc.loadedSpell.Cast(e)
+	}
+}
+
 type Spell interface {
 	Cast(target entity.Entity)
 	Name() string

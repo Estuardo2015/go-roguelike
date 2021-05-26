@@ -2,11 +2,12 @@ package modules
 
 import (
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/rs/zerolog/log"
 )
 
 func HandleInput(g *Game) {
 	HandleKeys(g)
-	HandleMouse()
+	HandleMouse(g)
 }
 
 func HandleKeys(g *Game) {
@@ -21,7 +22,14 @@ func HandleKeys(g *Game) {
 	}
 }
 
-func HandleMouse() {
+func HandleMouse(g *Game) {
 	if ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
+		x, y := GetCursorXY()
+		e := g.Level.EntityAt(x, y)
+
+		if e != nil {
+			eX, eY := e.GetPosition()
+			log.Debug().Msgf("Entity clicked at (%d,%d)", eX, eY)
+		}
 	}
 }
