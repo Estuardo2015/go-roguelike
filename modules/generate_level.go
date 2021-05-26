@@ -7,7 +7,6 @@ import (
 	"github.com/Estuardo2015/rogue_wizard/modules/grid"
 	"github.com/Estuardo2015/rogue_wizard/modules/logging"
 	"github.com/Estuardo2015/rogue_wizard/modules/utils"
-	"github.com/rs/zerolog/log"
 	"os"
 	"strings"
 )
@@ -47,7 +46,7 @@ func GenerateGridAndPlayer(f *os.File) (g *grid.Grid, p *Player, err error) {
 
 	charGrid := make([][]string, 0)
 	for scanner.Scan() {
-		log.Debug().Msg(scanner.Text())
+		//log.Debug().Msg(scanner.Text())
 		row := make([]string, 0)
 		for _, c := range scanner.Text() {
 			char := string(c)
@@ -96,7 +95,7 @@ func generatePlayer(scanner *bufio.Scanner) (*Player, error) {
 	scanner.Scan()
 	line := scanner.Text()
 
-	log.Debug().Msg(line)
+	//log.Debug().Msg(line)
 
 	// Read player coords from first line
 	pCoords := strings.Split(line, ",")

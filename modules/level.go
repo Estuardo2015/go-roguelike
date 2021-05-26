@@ -10,14 +10,10 @@ import (
 type Level struct {
 	*grid.Grid
 
-	Player   *Player
-	Entities []entity.Entity
+	Player *Player
+	entity.Manager
 
 	Camera *Camera
-}
-
-func (l *Level) AddEntity(e entity.Entity) {
-	l.Entities = append(l.Entities, e)
 }
 
 func NewLevel(tw int, g *grid.Grid, p *Player) *Level {

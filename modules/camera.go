@@ -51,10 +51,10 @@ func (c Camera) LookAt(g *Game, screen *ebiten.Image) {
 	}
 
 	// Draw Entities
-	for _, e := range g.Level.Entities {
+	g.Level.ForEachEntity(func(e entity.Entity) {
 		eX, eY := e.GetPosition()
 		ScreenDraw(eX-camX, eY-camY, e.Image(), screen, g)
-	}
+	})
 
 	// Draw Player
 	ScreenDraw(g.Level.Player.X-camX, g.Level.Player.Y-camY, g.Level.Player.Image(), screen, g)
